@@ -18,8 +18,8 @@ describe('AngularJS Test Suite', function(){
 			var ctrl = $controller('mainCtrl', {$scope:scope});
 			
 
-			expect(scope.title).toBeDefined();
-			expect(scope.title).toBe('Link Page');
+			expect(scope.linkPage.title).toBeDefined();
+			expect(scope.linkPage.title).toBe('Link Page');
 		});
 
 	});
