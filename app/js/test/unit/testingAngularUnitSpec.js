@@ -1,18 +1,25 @@
-describe('Testing AngularJS Test Suite', function(){
-	describe('Testing myCtrl', function(){
+describe('AngularJS Test Suite', function(){
+	beforeEach(module('myApp'));
+
+
+	  var $controller;
+
+	  beforeEach(inject(function(_$controller_){
+	    // The injector unwraps the underscores (_) from around the parameter names when matching
+	    $controller = _$controller_;
+	  }));
+	
+
+	describe('Testing mainCtrl', function(){
 
 		it('should initialize the title in the scope', function(){
-			module('myApp');
 
 			var scope = {};
-			var ctrl;
-
-			inject(function($controller){
-				ctrl = $controller('myCtrl', {$scope:scope});
-			});
+			var ctrl = $controller('mainCtrl', {$scope:scope});
+			
 
 			expect(scope.title).toBeDefined();
-			expect(scope.title).toBe('Ambassador Code Challenge');
+			expect(scope.title).toBe('Link Page');
 		});
 
 	});

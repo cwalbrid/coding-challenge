@@ -4,13 +4,16 @@ module.requires.push("ngRoute");
 module.config(function($routeProvider){
 	$routeProvider.when("/landing", {
 		templateUrl: "views/landing.html",
-		controller: "myCtrl"
+		controller: "landingCtrl"
 	});
 
 	$routeProvider.when("/link", {
 		templateUrl: "views/link.html",
-		controller:"myCtrl"
+		controller:"mainCtrl"
 	});
 
+	$routeProvider.otherwise({
+		templateUrl: "views/link.html"
+	});
 });
  

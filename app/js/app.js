@@ -1,10 +1,11 @@
 var app = angular.module("myApp", []);
 
-app.controller('myCtrl', function($scope){
-	$scope.title = 'Ambassador Code Challenge';
+app.controller('mainCtrl', function($scope){
+	$scope.title = 'Link Page';
 
 });
 
 app.controller('landingCtrl', function($scope){
 	console.log('landingCtrl');
 });
+
