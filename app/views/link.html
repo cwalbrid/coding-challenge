@@ -19,9 +19,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td><a href="colinwalbridge.com">colinwalbridge.com</a></td>
-				<td>1,000,004</td>
+			<tr ng-repeat="row in tableData track by $index">
+				<td><a href="colinwalbridge.com">{{row.title}}</a></td>
+				<td>4</td>
 				<td><a href="#">Edit</a></td>
 				<td><a href="#">Delete</a></td>
 			</tr>

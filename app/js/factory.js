@@ -2,26 +2,39 @@ var app = angular.module("myApp");
 
 app.factory('linkStore', function(){
 	
-	var rowData = [];
+	var tableData = [];
 	var linkData = {};
 					
 				
 
 	return{
 
-		saveLink: function(link){
-			if(link != undefined){	
-				linkData.title = link;
+		saveLink: function(input){
+			if(input != undefined){	
+				linkData.title = input;
+				linkData.clicks = 0;
+				
+				// tableData.push(linkData);
+				// linkData = {};
 				// console.log(linkData);
-				rowData.push(linkData);
-				console.log(rowData);		
+				// rowData.push(linkData);
+				// console.log(rowData);		
 			} else{
 				alert('Please enter a link title')
 			};	
 		},
 
-		fetchRow: function(){
-			return rowData;
+		fetchLink: function(){
+			console.log(linkData);
+			return linkData;
+		},
+
+		clearLink: function(){
+			linkData = {};
+		},
+
+		fetchTable: function(){
+			return tableData;
 		}
 
 	};
