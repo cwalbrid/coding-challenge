@@ -19,7 +19,7 @@ app.factory('linkStore', function(){
 	
 	var linkData = {};
 					
-				
+		
 
 	return{
 
@@ -70,4 +70,19 @@ app.factory('linkStore', function(){
 
 	};
 
+});
+
+app.factory('titleStore', function(){
+	var savedTitle = 'meep';
+
+	return{
+
+		saveTitle: function(title){
+			savedTitle = title;
+		},
+
+		fetchTitle: function(){
+			return(savedTitle);
+		}
+	};
 });
