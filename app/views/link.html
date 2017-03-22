@@ -20,9 +20,9 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="row in tableData track by $index">
-				<td><a href="#landing" target="_blank" ng-click="linkClick(row)">{{row.title}}</a></td>
+				<td><a href="#landing" target="_blank" ng-click="linkClick(row)" editable-text="row.title" e-form="textBtnForm">{{row.title || 'empty'}}</a></td>
 				<td>{{row.clicks}}</td>
-				<td><a href="#">Edit</a></td>
+				<td><a href="#" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">Edit</a></td>
 				<td><a href="#" ng-click="delete(row)">Delete</a></td>
 			</tr>
 		</tbody>

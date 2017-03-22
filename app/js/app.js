@@ -1,4 +1,4 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ["xeditable"]);
 
 app.controller('mainCtrl', ['$scope', 'linkStore', function($scope, linkStore){
 	$scope.linkPage = {title: 'Link Page'};
