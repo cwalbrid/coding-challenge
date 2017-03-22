@@ -23,6 +23,10 @@ app.controller('mainCtrl', ['$scope', 'linkStore', function($scope, linkStore){
 		linkStore.counter(link);
 	};
 
+	$scope.delete = function(row){
+		linkStore.delete(row);
+	};
+
 }]);
 
 

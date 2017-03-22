@@ -56,6 +56,19 @@ app.factory('linkStore', function(){
 			link.clicks += 1;
 		},
 
+		delete: function(row){
+			// for(var i = 0; i<= tableData.length; i++){
+			// 		if (tableData[i].title = row.title){
+			// 			console.log(tableData[i]);
+			// 		}
+			// 	}
+			tableData.forEach(function(link, index){
+				if(row.title === link.title){
+					tableData.splice(index, 1);
+					};
+				});
+			},
+
 		fetchTable: function(){
 			return tableData;
 		}
