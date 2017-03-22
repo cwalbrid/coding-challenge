@@ -2,7 +2,21 @@ var app = angular.module("myApp");
 
 app.factory('linkStore', function(){
 	
-	var tableData = [];
+	var tableData = [
+		{
+			title: 'one',
+			clicks: 1
+		}, 
+		{
+			title: 'two',
+			clicks: 2
+		}, 
+		{
+			title: 'three',
+			clicks: 3
+		}
+		];
+	
 	var linkData = {};
 					
 				
@@ -10,17 +24,22 @@ app.factory('linkStore', function(){
 	return{
 
 		saveLink: function(input){
-			if(input != undefined){	
+			var unique = true;
+
+			//filters out duplicate link titles
+			tableData.forEach(function(link){
+				if(input === link.title){
+					unique = false;
+				};
+			});
+
+			 if(input != undefined && unique === true){	
 				linkData.title = input;
-				linkData.clicks = 0;
-				
-				// tableData.push(linkData);
-				// linkData = {};
-				// console.log(linkData);
-				// rowData.push(linkData);
-				// console.log(rowData);		
+				linkData.clicks = 0;	
+				tableData.push(linkData);
+					
 			} else{
-				alert('Please enter a link title')
+				alert('Please enter a unique link title')
 			};	
 		},
 

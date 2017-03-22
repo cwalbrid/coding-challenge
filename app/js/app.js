@@ -4,26 +4,31 @@ app.controller('mainCtrl', ['$scope', 'linkStore', function($scope, linkStore){
 	$scope.linkPage = {title: 'Link Page'};
 
 
-	$scope.tableData = [
-		{
-			title: 'one',
-			clicks: 1
-		}, 
-		{
-			title: 'two',
-			clicks: 2
-		}, 
-		{
-			title: 'three',
-			clicks: 3
-		}
-	];
+	// $scope.tableData = [
+	// 	{
+	// 		title: 'one',
+	// 		clicks: 1
+	// 	}, 
+	// 	{
+	// 		title: 'two',
+	// 		clicks: 2
+	// 	}, 
+	// 	{
+	// 		title: 'three',
+	// 		clicks: 3
+	// 	}
+	// ];
+
+	$scope.tableData = linkStore.fetchTable();
 
 	$scope.addLink = function(input){
 		linkStore.saveLink(input);
 
-		var fetchedLink = linkStore.fetchLink();
-		console.log(fetchedLink);
+		// var fetchedLink = linkStore.fetchLink();
+		// console.log(fetchedLink);
+		// $scope.tableData.push(fetchedLink);
+
+		$scope.tableData = linkStore.fetchTable();
 
 		linkStore.clearLink();
 		$scope.linkPage.input = undefined;
