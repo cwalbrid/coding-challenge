@@ -38,8 +38,29 @@ app.controller('mainCtrl', ['$scope', 'linkStore', function($scope, linkStore){
 
 
 
-app.controller('landingCtrl', function($scope){
-	console.log('landingCtrl');
+app.controller('landingCtrl', function($scope, $location, linkStore){
+	$scope.landingBtn = function (){
+		
+		var query = "landing/?link="
+
+		var myUrl = $location.url();
+		console.log(myUrl);
+
+		$location.url([query]);
+	};
+	
+	appendUrl = function (){
+		
+		var query = "orange"
+
+		// var myUrl = $location.url();
+		// console.log(myUrl);
+
+		$location.search('link', query);
+	};
+
+	appendUrl();
+
 });
 
 

@@ -57,11 +57,6 @@ app.factory('linkStore', function(){
 		},
 
 		delete: function(row){
-			// for(var i = 0; i<= tableData.length; i++){
-			// 		if (tableData[i].title = row.title){
-			// 			console.log(tableData[i]);
-			// 		}
-			// 	}
 			tableData.forEach(function(link, index){
 				if(row.title === link.title){
 					tableData.splice(index, 1);
