@@ -3,48 +3,25 @@ var app = angular.module("myApp", []);
 app.controller('mainCtrl', ['$scope', 'linkStore', function($scope, linkStore){
 	$scope.linkPage = {title: 'Link Page'};
 
-
-	// $scope.tableData = [
-	// 	{
-	// 		title: 'one',
-	// 		clicks: 1
-	// 	}, 
-	// 	{
-	// 		title: 'two',
-	// 		clicks: 2
-	// 	}, 
-	// 	{
-	// 		title: 'three',
-	// 		clicks: 3
-	// 	}
-	// ];
-
 	$scope.tableData = linkStore.fetchTable();
 
 	$scope.addLink = function(input){
+		
+	//adds link to link table on submit button click	
 		linkStore.saveLink(input);
-
-		// var fetchedLink = linkStore.fetchLink();
-		// console.log(fetchedLink);
-		// $scope.tableData.push(fetchedLink);
 
 		$scope.tableData = linkStore.fetchTable();
 
 		linkStore.clearLink();
-		$scope.linkPage.input = undefined;
-		//stores user input in linkStore factory on button click
-	
-
-
-		// fetchedTable = linkStore.fetchTable();
-		// console.log(fetchedTable);
-
-		// $scope.tableData.push(fetchedRow);
-		// console.log($scope.tableData);
 		
+		$scope.linkPage.input = undefined;
+			
 	};
 
-	
+	$scope.linkClick = function(link){
+	//increases clicks count on link click
+		linkStore.counter(link);
+	};
 
 }]);
 

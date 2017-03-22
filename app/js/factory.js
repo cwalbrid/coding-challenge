@@ -52,6 +52,10 @@ app.factory('linkStore', function(){
 			linkData = {};
 		},
 
+		counter: function(link){
+			link.clicks += 1;
+		},
+
 		fetchTable: function(){
 			return tableData;
 		}
