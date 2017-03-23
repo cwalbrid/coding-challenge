@@ -2,6 +2,10 @@
 	width: 80%;
 }
 
+.home-nav{
+	margin-top: 20px;
+}
+
 .page-header{
 	padding-bottom: 19px;
 	margin-bottom: 39px;
@@ -19,17 +23,27 @@
 	max-width: 740px;
 	background-color: #e6e6e6;
 	border-radius: 12px;
+	margin-top: 43px;
 }
 
 .landing-wrapper{
-	/*background-color: ;*/
+	
 	text-align: center;
-	padding-bottom: 95px;
-	/*margin: 0 auto;*/
+	padding-bottom: 55px;
+	overflow-x: scroll;
+	
 }
 
-.link-title
+.landing-copy{
+	margin-bottom: 50px
+}
 
-.home-nav{
-	margin-top: 20px;
+.link-title{
+	color: #6984b0;
+	overflow-x: hidden;
+	/*text-transform: uppercase;*/
+}
+
+.img-landing{
+	border-radius: 23px;
 }
