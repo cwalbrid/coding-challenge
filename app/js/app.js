@@ -1,7 +1,7 @@
 var app = angular.module("myApp", ["xeditable"]);
 
 app.controller('mainCtrl', ['$scope', 'linkStore', 'titleStore', function($scope, linkStore, titleStore){
-	$scope.linkPage = {title: 'Link Page'};
+	$scope.linkPage = {title: 'Referral Marketing, Simplified'};
 
 	$scope.tableData = linkStore.fetchTable();
 

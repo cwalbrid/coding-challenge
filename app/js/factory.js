@@ -4,16 +4,16 @@ app.factory('linkStore', function(){
 	
 	var tableData = [
 		{
-			title: 'one',
-			clicks: 1
+			title: 'ted.com',
+			clicks: 47
 		}, 
 		{
-			title: 'two',
-			clicks: 2
+			title: 'facebook.com',
+			clicks: 62
 		}, 
 		{
-			title: 'three',
-			clicks: 3
+			title: 'colinwalbridge.com',
+			clicks: 998
 		}
 		];
 	

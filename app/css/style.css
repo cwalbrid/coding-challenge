@@ -1,0 +1,35 @@
+.container{
+	width: 80%;
+}
+
+.page-header{
+	padding-bottom: 19px;
+	margin-bottom: 39px;
+}
+
+.input-wrapper{
+	margin-bottom: 15px;
+}
+
+.btn-primary {
+	margin-left: 9px;
+}
+
+.landing-container{
+	max-width: 740px;
+	background-color: #e6e6e6;
+	border-radius: 12px;
+}
+
+.landing-wrapper{
+	/*background-color: ;*/
+	text-align: center;
+	padding-bottom: 95px;
+	/*margin: 0 auto;*/
+}
+
+.link-title
+
+.home-nav{
+	margin-top: 20px;
+}

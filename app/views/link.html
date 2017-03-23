@@ -1,8 +1,11 @@
 
-	<h1 class="page-header">{{linkPage.title}}</h1>
-
 
 <div class="container">
+	<h1 class="page-header">{{linkPage.title}}</h1>
+</div>
+
+<div class="container input-wrapper">
+	<span>Add a link:</span>
 	<input class="input-lg" ng-model="linkPage.input">
 	<button class="btn-lg btn-primary" ng-click="addLink(linkPage.input)">submit</button>
 </div>
