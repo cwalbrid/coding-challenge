@@ -2,6 +2,10 @@ Hello!
 
 Ambassador_Challenge is a Front-End application built with AngularJS and Bootstrap. 
 
+The repo for this project can be found at: https://github.com/cwalbrid/coding-challenge/tree/workshop
+
+The app is hosted on Heroku at: https://mighty-fortress-65423.herokuapp.com/
+
 
 
 PROBLEM-
@@ -33,6 +37,22 @@ I initially tried to learn/use Bower to install my front-end framework libraries
 The UI design is still relatively basic. With more time, I would brighten it up with imported font families, an eye-catching color palette, and modern design principles of minimal apps. I would also make the app more mobile-friendly by fleshing out my use of Bootstrap's grid system. 
 
 
+OTHER PROJECTS-
+
+Brick Oven Pizza Company:
+
+Brick Oven Pizza Co. is pizza chain website built with AngularJS.
+
+The site has two views:
+
+1. home.html: This view is the landing page for the site. It’s built with standard HTML markup, and includes a nav to different franchise locations. When users select a location in the nav, a corresponding filter keyword is set in the model (factory.js).
+
+2. location.html: This view is where users can see information about each franchise. Rather than writing markup for each franchise page, this view uses AngularJS expressions to render elements. Data for each franchise is stored in the model (factory.js). When the location.html page loads, data for a specific franchise is bound to the $scope. The filter keyword determines which franchise’s information is bound to the $scope and rendered in the markup.
+
+Because the data for each franchise populates a single view, adding new franchises does not require writing additional markup or linking to new html files. Instead, the information for the new franchise is added to the model (factory.js -> navData, viewData) and AngularJS does all the rendering.
+
+Repo: https://github.com/cwalbrid/Nexient-Pizza-Project
+Hosted: http://brick-oven-pizza-project.colinwalbridge.com/
 
 
 
