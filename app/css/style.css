@@ -2,8 +2,15 @@
 	width: 80%;
 }
 
-.home-nav{
-	margin-top: 20px;
+
+
+.link-container{
+	max-width: 940px;
+	min-height: 620px;
+	background-color: #e6e6e6;
+	border-radius: 12px;
+	margin-top: 43px;
+	/**/
 }
 
 .page-header{
@@ -13,6 +20,12 @@
 
 .input-wrapper{
 	margin-bottom: 15px;
+}
+
+.link-wrapper{
+	max-height: 390px;
+	overflow-y: auto;
+	margin-bottom: 20px;
 }
 
 .btn-primary {
@@ -26,11 +39,15 @@
 	margin-top: 43px;
 }
 
+.home-nav{
+	margin-top: 20px;
+}
+
 .landing-wrapper{
 	
 	text-align: center;
 	padding-bottom: 55px;
-	overflow-x: scroll;
+	overflow-x: auto;
 	
 }
 

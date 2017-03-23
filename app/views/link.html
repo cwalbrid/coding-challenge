@@ -1,33 +1,33 @@
+<div class="container link-container">
+	<div class="container">
+		<h1 class="page-header">{{linkPage.title}}</h1>
+	</div>
+	
+	<div class="container input-wrapper">
+		<span>Add a link:</span>
+		<input class="input-lg" ng-model="linkPage.input">
+		<button class="btn-lg btn-primary" ng-click="addLink(linkPage.input)">submit</button>
+	</div>
 
-
-<div class="container">
-	<h1 class="page-header">{{linkPage.title}}</h1>
-</div>
-
-<div class="container input-wrapper">
-	<span>Add a link:</span>
-	<input class="input-lg" ng-model="linkPage.input">
-	<button class="btn-lg btn-primary" ng-click="addLink(linkPage.input)">submit</button>
-</div>
-
-<div class="container">
-	<h2>Referral Links</h2>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Link Title</th>
-				<th>Clicks</th>
-				<th>Edit</th>
-				<th>Delete</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="row in tableData track by $index">
-				<td><a href="#landing" ng-click="linkClick(row)" editable-text="row.title" e-form="textBtnForm">{{row.title || 'empty'}}</a></td>
-				<td>{{row.clicks}}</td>
-				<td><a href="#" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">Edit</a></td>
-				<td><a href="#" ng-click="delete(row)">Delete</a></td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="container link-wrapper">
+		<h2>Referral Links</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Link Title</th>
+					<th>Clicks</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="row in tableData track by $index">
+					<td><a href="#landing" ng-click="linkClick(row)" editable-text="row.title" e-form="textBtnForm">{{row.title || 'empty'}}</a></td>
+					<td>{{row.clicks}}</td>
+					<td><a href="#" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">Edit</a></td>
+					<td><a href="#" ng-click="delete(row)">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
