@@ -1,8 +1,10 @@
+body{
+	background-color: #354964;
+}
+
 .container{
 	width: 80%;
 }
-
-
 
 .link-container{
 	max-width: 940px;
@@ -10,26 +12,41 @@
 	background-color: #e6e6e6;
 	border-radius: 12px;
 	margin-top: 43px;
-	/**/
 }
 
 .page-header{
 	padding-bottom: 19px;
 	margin-bottom: 39px;
+	border-color: #bfbfbf;
+	color: #465f86;
 }
 
 .input-wrapper{
 	margin-bottom: 15px;
 }
 
+.input-copy{
+	color: #6984b0;
+}
+
 .link-wrapper{
 	max-height: 390px;
 	overflow-y: auto;
 	margin-bottom: 20px;
+	/*background-color: #6984b0;*/
+}
+
+.link-wrapper h2{
+	margin-bottom: 20px;
+	color: #465f86;
 }
 
 .btn-primary {
 	margin-left: 9px;
+}
+
+tbody{
+	background-color: #d9d9d9;
 }
 
 .landing-container{
@@ -41,6 +58,11 @@
 
 .home-nav{
 	margin-top: 20px;
+}
+
+.home-nav a{
+	font-weight: bold;
+	color: #ad1d1e;
 }
 
 .landing-wrapper{
