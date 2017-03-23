@@ -5,7 +5,7 @@ describe('AngularJS Test Suite', function(){
 	  var $controller;
 
 	  beforeEach(inject(function(_$controller_){
-	    // The injector unwraps the underscores (_) from around the parameter names when matching
+	
 	    $controller = _$controller_;
 	  }));
 	
@@ -19,7 +19,7 @@ describe('AngularJS Test Suite', function(){
 			
 
 			expect(scope.linkPage.title).toBeDefined();
-			expect(scope.linkPage.title).toBe('Link Page');
+			expect(scope.linkPage.title).toBe('Referral Marketing, Simplified');
 		});
 
 	});

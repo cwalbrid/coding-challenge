@@ -6,6 +6,7 @@ body{
 	width: 80%;
 }
 
+/*Link Page*/
 .link-container{
 	max-width: 940px;
 	min-height: 620px;
@@ -33,7 +34,6 @@ body{
 	max-height: 390px;
 	overflow-y: auto;
 	margin-bottom: 20px;
-	/*background-color: #6984b0;*/
 }
 
 .link-wrapper h2{
@@ -49,6 +49,7 @@ tbody{
 	background-color: #d9d9d9;
 }
 
+/*Landing Page*/
 .landing-container{
 	max-width: 740px;
 	background-color: #e6e6e6;

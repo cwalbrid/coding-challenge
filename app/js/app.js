@@ -5,9 +5,9 @@ app.controller('mainCtrl', ['$scope', 'linkStore', 'titleStore', function($scope
 
 	$scope.tableData = linkStore.fetchTable();
 
+	//adds link to link table when submit button is clicked	
 	$scope.addLink = function(input){
 		
-	//adds link to link table on submit button click	
 		linkStore.saveLink(input);
 
 		$scope.tableData = linkStore.fetchTable();
@@ -18,14 +18,15 @@ app.controller('mainCtrl', ['$scope', 'linkStore', 'titleStore', function($scope
 			
 	};
 
-	$scope.linkClick = function(link){
 	//increases clicks count on link click
+	$scope.linkClick = function(link){
+	
 		linkStore.counter(link);
-
 		var linkTitle = link.title;
 		titleStore.saveTitle(linkTitle);
 	};
 
+	//deletes link from link table
 	$scope.delete = function(row){
 		linkStore.delete(row);
 	};
@@ -34,6 +35,7 @@ app.controller('mainCtrl', ['$scope', 'linkStore', 'titleStore', function($scope
 
 app.controller('landingCtrl', ['$scope', '$location', 'titleStore', function($scope, $location, titleStore){
 	
+	//adds clicked link title to URL as query parameter, uses query parameter to populate page content
 	appendUrl = function (){
 		
 		var query = titleStore.fetchTitle();
@@ -46,17 +48,3 @@ app.controller('landingCtrl', ['$scope', '$location', 'titleStore', function($sc
 	appendUrl();
 
 }]);
-
-
-
-
-
-
-
-app.directive('tableRow', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'templates/tableRow.html'
-  };
-});
-
